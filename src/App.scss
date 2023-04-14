@@ -1,0 +1,301 @@
+// import partials
+@import "./scss/Typography";
+@import "./scss/Mixins";
+@import "./scss/resets";
+
+// Define variables for color scheme
+$primary-color: #1a1d2b;
+$secondary-color: #ffd700;
+$tertiary-color: #ecf0f1;
+$quaternary-color: #5e8b7e;
+
+// global styles
+html {
+  text-align: center;
+  body {
+    scroll-margin-top: 5rem;
+  }
+}
+
+// define body styles
+body {
+  background-color: $primary-color;
+  color: $tertiary-color;
+  width: 100vw;
+  max-width: 100vw;
+  font-family: $primary-font;
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+
+  // Assign the secondary font to headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $secondary-font;
+  }
+}
+
+// Define styles for the header
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 3.5rem;
+  background-color: $secondary-color;
+  font-family: $secondary-font;
+
+  // Add styles for the logo
+  // .logo {
+  //   font-size: 2rem;
+  //   font-weight: bold;
+  //   color: $secondary-color;
+  //   text-transform: uppercase;
+  //   letter-spacing: 2px;
+  //   margin: 20px;
+  // }
+
+  // Add styles for the navigation links
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin: 0;
+      padding: 1rem 0 1rem 0;
+      justify-content: center;
+      li {
+        margin-right: 1rem;
+        a {
+          font-size: 1.2rem;
+          color: $primary-color;
+          text-decoration: none;
+          letter-spacing: 2px;
+          transition: color 0.15s ease-in;
+
+          &:hover {
+            color: $tertiary-color;
+            text-decoration: solid;
+            line-height: 1.5;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Define styles for footer
+footer {
+  padding: 1.25rem;
+}
+
+// General style for sections
+section {
+  margin: 0 auto;
+  padding-top: 1rem;
+  min-height: 100vh;
+
+  .section__heading {
+    text-align: center;
+    color: $secondary-color;
+    text-shadow: inset $quaternary-color;
+    scroll-margin-top: 10vh;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Projects style
+.projects {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+    color: $tertiary-color;
+    transition: color 0.25s ease-in-out;
+    width: 100%;
+    display: block;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.project__card {
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 0 2rem 0;
+}
+
+.project__image {
+  transition: all 0.15s ease-in-out;
+  padding-bottom: 1rem;
+
+  & img {
+    border-radius: 0.5rem;
+    max-height: 50vh;
+    max-width: 80vw;
+  }
+
+  &:hover {
+    filter: drop-shadow(0.1rem 0.1rem 1rem #00ffff);
+    transform: scale(0.95);
+  }
+}
+
+.project__details {
+  width: 80%;
+  margin: 0 auto;
+
+  .project__title {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .project__description {
+    margin-bottom: 1rem;
+  }
+}
+
+.project__links {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+// Contact styling
+.contact {
+  width: 80%;
+  min-height: 80vh;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+    align-items: center;
+    margin: 0 auto;
+
+    label {
+      margin-bottom: 0.15rem;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 1.5rem;
+      border-radius: 0.5rem;
+      padding: 0.25rem;
+      outline: none;
+      border: none;
+      color: $primary-color;
+      transition: all 0.15s ease-in-out;
+      background-color: #b0bbbb;
+
+      &:focus {
+        outline: solid darken($secondary-color, 5) 0.3rem;
+        background-color: #fff;
+      }
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+    textarea {
+      width: 20rem;
+    }
+  }
+
+  div {
+    padding: 2rem;
+
+    &:nth-of-type(1) {
+      border-bottom: 0.1em solid $tertiary-color;
+    }
+  }
+
+  button {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.form__container {
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  textarea {
+    min-height: 5rem;
+  }
+}
+
+// About (& skills) styling
+.about,
+.skills {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.skills {
+  .section__heading {
+    margin: 0;
+    margin-top: 2rem;
+  }
+}
+
+.about__headshot {
+  width: 35vw;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  margin: 0 auto;
+  max-width: 60ch;
+  text-align: center;
+
+  h2,
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.accent {
+  color: $secondary-color;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.skill {
+  background-color: $secondary-color;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.25rem;
+  color: $primary-color;
+  transition: background-color 0.25s ease-out;
+
+  &:hover {
+    background-color: $tertiary-color;
+    transform: scale(1.1);
+    transform: translateY(-0.25em);
+  }
+}

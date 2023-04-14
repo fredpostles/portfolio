@@ -1,38 +1,214 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+body {
+  background-color: #1a1d2b;
+  color: #ecf0f1;
+  width: 100vw;
+  max-width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  -webkit-filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+          filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
+}
+
+body h1,
+body h2,
+body h3 {
+  font-family: "Merriweather", serif;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #ffd700;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  z-index: 100;
+  font-family: "Merriweather", serif;
+}
+
+header.scroll {
+  background-color: #5e8b7e;
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav ul li {
+  margin: 20px;
+}
+
+header nav ul li a {
+  font-size: 1.2rem;
+  color: #1a1d2b;
+  text-decoration: none;
+  letter-spacing: 2px;
+  -webkit-transition: color 0.15s ease-in;
+  transition: color 0.15s ease-in;
+}
+
+header nav ul li a:hover {
+  color: #ecf0f1;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  line-height: 1.5;
+}
+
+section {
+  height: 90vh;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section .section__heading {
+  text-align: center;
+  color: #ffd700;
+  text-shadow: inset #5e8b7e;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects a {
+  text-decoration: none;
+  color: #ecf0f1;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+  width: 100%;
+  display: block;
+}
+
+.projects a:hover {
+  color: #5e8b7e;
+}
+
+.project__card {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em;
+}
+
+.project__image {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.project__image img {
+  border-radius: 0.5rem;
+  max-height: 50vh;
+  max-width: 80vw;
+}
+
+.project__image:hover {
+  -webkit-filter: drop-shadow(0.1rem 0.1rem 1rem #00ffff);
+          filter: drop-shadow(0.1rem 0.1rem 1rem #00ffff);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.project__details {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.project__links {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contact form {
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+  margin-bottom: 1rem;
+}
+
+.contact div {
+  padding: 2rem;
+}
+
+.contact__info__container {
+  border-top: solid 0.1em #ecf0f1;
+}
+
+.section__heading section {
+  height: 90vh;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section__heading .section__heading {
+  text-align: center;
+  color: #ffd700;
+}
+
+.form__container {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.form__container textarea {
+  min-height: 5rem;
+}
+
+.bio {
+  margin: 0 auto;
+  width: 60ch;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.accent {
+  color: #ffd700;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=App.css.map */
