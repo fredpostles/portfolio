@@ -39,7 +39,7 @@ const About = () => {
         />
       </div>
       <div className="bio">
-        <h2>
+        <h2 className="sub-heading">
           I'm Fred, an adaptable and inquisitive{" "}
           <span className="accent">software engineer</span> based in London. I'm
           a lifelong <span className="accent">problem-solver</span> turned{" "}

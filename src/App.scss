@@ -9,7 +9,7 @@ $secondary-color: #ffd700;
 $tertiary-color: #ecf0f1;
 $quaternary-color: #5e8b7e;
 
-// global styles
+// GLOBAL STYLES
 html {
   text-align: center;
   body {
@@ -24,7 +24,6 @@ body {
   width: 100vw;
   max-width: 100vw;
   font-family: $primary-font;
-  filter: drop-shadow(0.5rem 0.5rem 0.5rem black);
 
   // Assign the secondary font to headings
   h1,
@@ -36,6 +35,10 @@ body {
   }
 }
 
+.sub-heading {
+  font-size: 1.25em;
+}
+
 // Define styles for the header
 header {
   position: sticky;
@@ -43,51 +46,136 @@ header {
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 3.5rem;
-  background-color: $secondary-color;
-  font-family: $secondary-font;
+  height: 4rem;
+  background-color: $primary-color;
+  color: $tertiary-color;
+  border-bottom: solid 0.25rem $secondary-color;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  font-size: 1.2rem;
 
-  // Add styles for the logo
-  // .logo {
-  //   font-size: 2rem;
-  //   font-weight: bold;
-  //   color: $secondary-color;
-  //   text-transform: uppercase;
-  //   letter-spacing: 2px;
-  //   margin: 20px;
-  // }
+  &.down {
+    top: -6rem;
+  }
 
-  // Add styles for the navigation links
-  nav {
-    ul {
-      display: flex;
-      flex-direction: row;
-      list-style: none;
-      margin: 0;
-      padding: 1rem 0 1rem 0;
-      justify-content: center;
-      li {
-        margin-right: 1rem;
-        a {
-          font-size: 1.2rem;
-          color: $primary-color;
-          text-decoration: none;
-          letter-spacing: 2px;
-          transition: color 0.15s ease-in;
+  .header__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
 
-          &:hover {
-            color: $tertiary-color;
-            text-decoration: solid;
-            line-height: 1.5;
-          }
-        }
+  .header__logo {
+    p {
+      background: -webkit-linear-gradient(
+        0deg,
+        $tertiary-color,
+        $secondary-color
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
 
-        &:hover {
-          cursor: pointer;
-        }
+  @keyframes title-animation-rev {
+    0% {
+      background-size: 650%;
+    }
+    40% {
+      background-size: 650%;
+    }
+    100% {
+      background-size: 100%;
+    }
+  }
+
+  @keyframes title-animation {
+    0% {
+      background-size: 100%;
+    }
+    80% {
+      background-size: 650%;
+    }
+    100% {
+      background-size: 650%;
+    }
+  }
+
+  .header__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+
+    div {
+      width: 25%;
+      border-radius: 0.25rem;
+      padding: 0.15rem;
+      margin: 0.1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $tertiary-color;
+
+      &:hover {
+        color: $secondary-color;
       }
     }
   }
+}
+
+// Add styles for the navigation links
+nav {
+  display: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  li {
+    padding: 0.25rem;
+    transition: all 0.25s ease-in-out;
+    a {
+      line-height: 1.25;
+    }
+  }
+}
+
+// hover animation for main nav links
+.header__nav__link {
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+
+    & a {
+      color: $secondary-color;
+    }
+  }
+}
+
+.header__nav__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+  background-color: $secondary-color;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.header__nav__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 // Define styles for footer
@@ -115,40 +203,32 @@ section {
 .projects {
   display: flex;
   flex-direction: column;
-
-  a {
-    text-decoration: none;
-    color: $tertiary-color;
-    transition: color 0.25s ease-in-out;
-    width: 100%;
-    display: block;
-
-    &:hover {
-      color: $secondary-color;
-    }
-  }
 }
 
 .project__card {
   grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
+  margin: 0 auto 2.5rem;
   text-align: center;
   padding: 1rem 0 2rem 0;
+  width: 80%;
 }
 
 .project__image {
   transition: all 0.15s ease-in-out;
   padding-bottom: 1rem;
+  width: 80vw;
+  margin: 0 auto;
 
   & img {
-    border-radius: 0.5rem;
+    border-radius: 0.45rem;
     max-height: 50vh;
-    max-width: 80vw;
-  }
+    width: auto;
+    max-width: 100%;
 
-  &:hover {
-    filter: drop-shadow(0.1rem 0.1rem 1rem #00ffff);
-    transform: scale(0.95);
+    &:hover {
+      filter: drop-shadow(0.5rem 1rem 0.6rem black);
+      transform: scale(0.95);
+    }
   }
 }
 
@@ -158,11 +238,42 @@ section {
 
   .project__title {
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   .project__description {
     margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $tertiary-color;
+    transition: all 0.15s ease-in-out;
+    width: 100%;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.project__techs__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  .tech {
+    margin-bottom: 1.2rem;
+  }
+
+  .tech:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  .icons img {
+    width: 3.5rem;
+    margin: 0.5rem;
   }
 }
 
@@ -170,89 +281,32 @@ section {
   text-align: center;
   display: flex;
   justify-content: center;
-  width: 60%;
   margin: 0 auto;
-}
 
-// Contact styling
-.contact {
-  width: 80%;
-  min-height: 80vh;
-
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-items: stretch;
-    align-items: center;
-    margin: 0 auto;
-
-    label {
-      margin-bottom: 0.15rem;
-    }
-
-    input,
-    textarea {
-      margin-bottom: 1.5rem;
-      border-radius: 0.5rem;
-      padding: 0.25rem;
-      outline: none;
-      border: none;
-      color: $primary-color;
-      transition: all 0.15s ease-in-out;
-      background-color: #b0bbbb;
-
-      &:focus {
-        outline: solid darken($secondary-color, 5) 0.3rem;
-        background-color: #fff;
-      }
-
-      &:hover {
-        background-color: #fff;
-      }
-    }
-
-    textarea {
-      width: 20rem;
-    }
-  }
-
-  div {
-    padding: 2rem;
-
-    &:nth-of-type(1) {
-      border-bottom: 0.1em solid $tertiary-color;
-    }
-  }
-
-  button {
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    border: solid transparent;
-    cursor: pointer;
+  a {
+    max-width: fit-content;
+    text-decoration: underline;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    margin: 0 1rem;
 
     &:hover {
-      background-color: $secondary-color;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-15px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ffd700' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+      background-size: auto 0.2rem;
+      text-decoration: none;
     }
-  }
-}
-
-.form__container {
-  margin: 0 auto;
-  padding: 0 2rem;
-
-  textarea {
-    min-height: 5rem;
   }
 }
 
 // About (& skills) styling
-.about,
-.skills {
+.about {
   margin: 0 auto;
   width: 80%;
 }
 
 .skills {
+  width: 90%;
+  margin: 0 auto;
   .section__heading {
     margin: 0;
     margin-top: 2rem;
@@ -271,7 +325,11 @@ section {
 
   h2,
   p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .sub-heading {
+    margin-bottom: 1rem;
   }
 }
 
@@ -292,10 +350,98 @@ section {
   margin: 0.25rem;
   color: $primary-color;
   transition: background-color 0.25s ease-out;
+  cursor: default;
 
   &:hover {
     background-color: $tertiary-color;
     transform: scale(1.1);
     transform: translateY(-0.25em);
+  }
+}
+
+// Contact styling
+.contact {
+  width: 80%;
+  min-height: 80vh;
+
+  .contact__info__container {
+    max-width: 100ch;
+    margin: 0 auto;
+  }
+
+  div {
+    padding: 2rem;
+
+    &:nth-of-type(1) {
+      border-bottom: 0.1em solid $tertiary-color;
+    }
+  }
+
+  .submitBtn {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: solid transparent;
+    cursor: pointer;
+    width: 10rem;
+    margin: 0 auto;
+
+    &:hover {
+      background-color: $secondary-color;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.form__container {
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  textarea {
+    min-height: 5rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 40rem;
+
+  label {
+    display: none;
+  }
+
+  input,
+  textarea {
+    font-family: $primary-font;
+    min-width: 20rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    color: $primary-color;
+    transition: all 0.15s ease-in-out;
+    background-color: #b0bbbb;
+
+    &:focus {
+      outline: solid darken($secondary-color, 5) 0.3rem;
+      background-color: #fff;
+    }
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 540px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

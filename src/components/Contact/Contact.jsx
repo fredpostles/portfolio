@@ -20,8 +20,7 @@ const Contact = () => {
       <div className="contact__info__container">
         <p>
           If you have any inquiries or collaboration opportunities, feel free to
-          reach out to me through the contact form below - or email me directly
-          at <span>email@email.com</span>.
+          reach out to me through the contact form below.
         </p>
       </div>
       <div className="form__container">
@@ -31,6 +30,7 @@ const Contact = () => {
             type="text"
             id="name"
             value={name}
+            placeholder="Enter your name"
             onChange={(e) => setName(e.target.value)}
             required
           />
@@ -40,6 +40,7 @@ const Contact = () => {
             type="email"
             id="email"
             value={email}
+            placeholder="Enter your email"
             onChange={(e) => setEmail(e.target.value)}
             required
           />
@@ -48,11 +49,14 @@ const Contact = () => {
           <textarea
             id="message"
             value={message}
+            placeholder="Enter your message"
             onChange={(e) => setMessage(e.target.value)}
             required
           ></textarea>
 
-          <button type="submit">Send Message</button>
+          <button type="submit" className="submitBtn">
+            Send Message
+          </button>
         </form>
       </div>
     </section>
