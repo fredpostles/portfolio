@@ -80,30 +80,6 @@ header {
     }
   }
 
-  @keyframes title-animation-rev {
-    0% {
-      background-size: 650%;
-    }
-    40% {
-      background-size: 650%;
-    }
-    100% {
-      background-size: 100%;
-    }
-  }
-
-  @keyframes title-animation {
-    0% {
-      background-size: 100%;
-    }
-    80% {
-      background-size: 650%;
-    }
-    100% {
-      background-size: 650%;
-    }
-  }
-
   .header__links {
     display: flex;
     justify-content: space-around;
@@ -211,6 +187,7 @@ section {
   text-align: center;
   padding: 1rem 0 2rem 0;
   width: 80%;
+  filter: drop-shadow(0.25rem 0.25rem 0.25rem black);
 }
 
 .project__image {

@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => {
         </a>
         <p className="project__description">{project.description}</p>
         <div className="project__techs__list">
-          {project.techs.map((tech, index) => {
+          {project.techs?.map((tech, index) => {
             return (
               <div className="tech icons" key={index}>
                 <Tooltip content={tech}>

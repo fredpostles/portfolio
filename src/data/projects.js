@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "Portfolio",
+    image: "portfolio-desktop.png",
+    description: "Did someone say recursion?",
+    demoLink: null,
+    gitHubLinkFront: null,
+    gitHubLinkBack: null,
+    techs: ["HTML", "SASS", "JavaScript", "React"],
+  },
+  {
     title: "Make Food, Not Waste",
     image: "mfnw-desktop.png",
     description:
