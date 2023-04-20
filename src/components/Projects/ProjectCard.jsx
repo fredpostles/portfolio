@@ -1,20 +1,18 @@
 import React, { useRef } from "react";
 import Tooltip from "../Tooltip/Tooltip";
 
-const ProjectCard = ({ project, index, animateFrom }) => {
+const ProjectCard = React.forwardRef((props, ref) => {
+  const { project, index, animateFrom } = props;
+
   const animateDirection =
     index % 2 === 0 ? "gs_reveal_fromLeft" : "gs_reveal_fromRight";
 
-  console.log("animatedirection", animateDirection);
-
   const classList = ["project__card", "gs_reveal", animateDirection];
-
-  console.log("classlist", classList);
 
   animateFrom(project, classList);
 
   return (
-    <div className={classList.join(" ")}>
+    <div className={classList.join(" ")} ref={ref}>
       <div className="project__image">
         <a href={project.demoLink}>
           <img
@@ -65,6 +63,6 @@ const ProjectCard = ({ project, index, animateFrom }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProjectCard;

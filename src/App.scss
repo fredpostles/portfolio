@@ -212,8 +212,8 @@ section {
     max-width: 100%;
 
     &:hover {
-      filter: drop-shadow(0.5rem 1rem 0.6rem black);
-      transform: scale(1.1);
+      filter: drop-shadow(0.25rem 0.25rem 0.25rem black);
+      transform: scale(1.05);
     }
   }
 }
@@ -533,8 +533,14 @@ form {
   }
 
   // ABOUT styling
+
+  .about {
+    font-size: 0.75rem;
+  }
+
   .about__content__wrapper {
     display: flex;
+    align-items: center;
     padding: 2rem;
   }
 }
