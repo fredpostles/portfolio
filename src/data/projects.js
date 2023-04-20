@@ -6,7 +6,7 @@ export const projects = [
     demoLink: null,
     gitHubLinkFront: null,
     gitHubLinkBack: null,
-    techs: ["HTML", "SASS", "JavaScript", "React"],
+    techs: ["HTML", "SASS", "JavaScript", "React", "NodeJS", "MongoDB"],
   },
   {
     title: "Make Food, Not Waste",
@@ -51,7 +51,7 @@ export const projects = [
     title: "Nowness Homage",
     image: "nowness-desktop.png",
     description:
-      "Fully-responsive homage version of nowness.com, recreated purely using HTML and CSS to showcase my ability to create any design required.",
+      "Fully-responsive homage version of nowness.com, recreated purely using HTML and CSS, demonstrating my ability to faithfully reproduce any design.",
     demoLink: "https://nowness-homage-fp.netlify.app/",
     gitHubLinkFront: "https://github.com/fredpostles/nowness-homage-piece",
     gitHubLinkBack: null,

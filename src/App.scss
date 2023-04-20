@@ -198,7 +198,7 @@ section {
 
   & img {
     border-radius: 0.45rem;
-    max-height: 50vh;
+    max-height: 100vh;
     width: auto;
     max-width: 100%;
 
@@ -238,10 +238,12 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 1rem;
 
   .tech {
     margin-bottom: 1.2rem;
+
+    display: flex;
+    align-items: center;
   }
 
   .tech:hover {
@@ -249,8 +251,12 @@ section {
   }
 
   .icons img {
-    width: 3.5rem;
-    margin: 0.5rem;
+    width: 2rem;
+    margin: 0.25rem;
+  }
+
+  .Tooltip-Wrapper {
+    height: fit-content;
   }
 }
 
@@ -393,7 +399,7 @@ form {
   input,
   textarea {
     font-family: $primary-font;
-    min-width: 20rem;
+    min-width: 10rem;
     margin-bottom: 1.5rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
@@ -415,10 +421,93 @@ form {
 }
 
 // MEDIA QUERIES
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 600px) {
+  html {
+    font-size: large;
+  }
+
   nav {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .project__techs__list {
+    .tech {
+      margin-bottom: 1.2rem;
+    }
+
+    .tech:hover {
+      transform: translateY(-0.5rem);
+    }
+
+    .icons img {
+      width: 2.5rem;
+      margin: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: x-large;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    width: 90%;
+    margin: auto;
+    padding: 0;
+    padding-bottom: 2.5rem;
+
+    .project__title {
+      margin-bottom: 0;
+    }
+
+    .project__description {
+      margin: 0.5rem auto;
+      width: 80%;
+    }
+
+    .project__image,
+    .project__details {
+      min-height: fit-content;
+    }
+
+    .project__details {
+      width: 80%;
+      margin: auto 0;
+      padding-bottom: 0.5rem;
+
+      .project__title {
+        font-size: 1.2rem;
+      }
+    }
+
+    .project__image {
+      padding-bottom: 0;
+    }
+
+    .project__image img {
+      max-height: 80rem;
+    }
+  }
+
+  .project__techs__list {
+    margin: 0;
+    .tech:hover {
+      transform: translateY(-0.5rem);
+    }
+
+    .icons img {
+      width: 1.5rem;
+      margin: 0.25rem;
+    }
   }
 }
