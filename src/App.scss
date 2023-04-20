@@ -14,13 +14,27 @@ html {
   text-align: center;
   body {
     scroll-margin-top: 5rem;
-
-    background-image: repeating-linear-gradient(
-      45deg,
-      $primary-color 25%,
-      #2a3153 50%,
-      $primary-color 75%
+    background-size: cover;
+    background: rgb(91, 99, 140);
+    background: -moz-linear-gradient(
+      360deg,
+      rgba(91, 99, 140, 1) 0%,
+      rgba(43, 53, 107, 1) 47%,
+      rgba(26, 29, 43, 1) 100%
     );
+    background: -webkit-linear-gradient(
+      360deg,
+      rgba(91, 99, 140, 1) 0%,
+      rgba(43, 53, 107, 1) 47%,
+      rgba(26, 29, 43, 1) 100%
+    );
+    background: linear-gradient(
+      360deg,
+      rgba(91, 99, 140, 1) 0%,
+      rgba(43, 53, 107, 1) 47%,
+      rgba(26, 29, 43, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b638c",endColorstr="#1a1d2b",GradientType=1);
   }
 }
 
