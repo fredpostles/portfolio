@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
