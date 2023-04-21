@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`${scrollDirection} === "down" ? "hide" : "show"`}
+      className={scrollDirection === "down" ? "hide" : "show"}
     >
       <div className="header__wrapper">
         <div className="header__logo">

@@ -13,6 +13,7 @@ $quaternary-color: #5e8b7e;
 html {
   text-align: center;
   body {
+    position: relative;
     scroll-margin-top: 5rem;
     background-size: cover;
     background: rgb(91, 99, 140);
@@ -38,6 +39,42 @@ html {
   }
 }
 
+// upArrow icon styling (scrolls to top)
+.upArrow {
+  width: fit-content;
+  background: none;
+  outline: none;
+  border: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  > .icon {
+    transform: translateX(5rem);
+  }
+
+  &.visible {
+    opacity: 0.5;
+
+    > .icon {
+      transform: translateX(-0.5rem);
+    }
+  }
+}
+
+.icon {
+  height: 2.5rem;
+  color: $tertiary-color;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
 // define body styles
 body {
   background-color: $primary-color;
@@ -45,6 +82,10 @@ body {
   width: 100vw;
   max-width: 100vw;
   font-family: $primary-font;
+
+  .sub-heading {
+    font-size: 1.25em;
+  }
 
   // Assign the secondary font to headings
   h1,
@@ -54,10 +95,6 @@ body {
   h5 {
     font-family: $secondary-font;
   }
-}
-
-.sub-heading {
-  font-size: 1.25em;
 }
 
 // Define styles for the header
@@ -374,14 +411,8 @@ section {
   .contact__info__container {
     max-width: 100ch;
     margin: 0 auto;
-  }
-
-  div {
+    border-bottom: 0.1em solid $tertiary-color;
     padding: 2rem;
-
-    &:nth-of-type(1) {
-      border-bottom: 0.1em solid $tertiary-color;
-    }
   }
 
   .submitBtn {
@@ -402,7 +433,7 @@ section {
 
 .form__container {
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 2rem;
 
   textarea {
     min-height: 5rem;
@@ -440,6 +471,67 @@ form {
 
     &:hover {
       background-color: #fff;
+    }
+  }
+}
+
+.message__sent__container {
+  padding: 0 auto 2rem;
+  line-height: 2rem;
+  text-align: center;
+  filter: drop-shadow(1px 1px 1px black);
+
+  p {
+    color: $tertiary-color;
+    font-size: 1.2rem;
+    font: $primary-font;
+    width: 40ch;
+    margin: 0 auto 1rem;
+  }
+
+  .dividing__line {
+    margin: 1rem auto;
+    height: 0.2rem;
+    width: 75%;
+
+    background-color: $secondary-color;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+
+    margin-bottom: 1rem;
+    color: $secondary-color;
+  }
+
+  .explore {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5rem 2.5rem;
+    color: $primary-color;
+
+    h2 {
+      color: $secondary-color;
+    }
+  }
+
+  .envelope {
+    width: 10rem;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    color: $secondary-color;
+  }
+
+  .arrow {
+    width: 2.5rem;
+    height: auto;
+    color: $tertiary-color;
+    padding: 0.5rem;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      opacity: 0.9;
     }
   }
 }
@@ -498,7 +590,8 @@ form {
     padding: 2rem;
 
     .project__title {
-      margin-bottom: 0;
+      margin: 0 auto;
+      width: 90%;
     }
 
     .project__description {
