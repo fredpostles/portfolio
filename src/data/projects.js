@@ -10,7 +10,7 @@ export const projects = [
     ],
     description:
       "Did someone say recursion? This portfolio was built using React and SCSS, with a MongoDB backend. It's fully responsive and features plenty of interactivity with CSS and GreenSock animations.",
-    demoLink: null,
+    demoLink: "https://fredpostles.com/",
     gitHubLinkFront: null,
     gitHubLinkBack: null,
     techs: [

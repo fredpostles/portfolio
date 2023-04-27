@@ -71,7 +71,7 @@ const About = () => {
             <div className="skillsInfo">
               <p>
                 You could say my journey to{" "}
-                <span class="accent">software engineering</span> began with
+                <span className="accent">software engineering</span> began with
                 problem-solving experiences like{" "}
                 <span className="accent">learning to solve a Rubik's cube</span>{" "}
                 by memorizing algorithms from a YouTube video,{" "}
