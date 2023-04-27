@@ -12,15 +12,17 @@ const Contact = () => {
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    // console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
 
     setIsSending(true);
 
     try {
       // send form data to server using axios
-      await axios.post(`${process.env.API_URL}/contact`, {
+      await axios.post(`${API_URL}/contact`, {
         name,
         email,
         message,
