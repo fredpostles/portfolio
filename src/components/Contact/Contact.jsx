@@ -4,6 +4,7 @@ import MessageSent from "./MessageSent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Helmet from "react-helmet";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -43,6 +44,19 @@ const Contact = () => {
 
   return (
     <section className="contact" id="contact">
+      <Helmet>
+        <title>Contact - Fred's Portfolio</title>
+        <meta
+          name="description"
+          content="Get in touch with me - JavaScript engineer (Frontend React, backend Node.js Express) and software developer. Check out my portfolio projects."
+        />
+        <meta
+          name="keywords"
+          content="software developer, software engineer, React, JavaScript, Node, Express, MERN, MongoDB, SQL"
+        />
+        <meta name="author" content="Fred Postles" />
+        <link rel="canonical" href="https://your-portfolio.com/about" />
+      </Helmet>
       <h2 className="section__heading">Contact Me</h2>
       {isSent ? (
         <MessageSent />

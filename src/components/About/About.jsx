@@ -9,13 +9,13 @@ const About = () => {
         <title>About - Fred's Portfolio</title>
         <meta
           name="description"
-          content="Learn more about me and my experience as a JavaScript engineer (Frontend React, backend Node.js Express) and software developer."
+          content="Learn more about me and my experience as a JavaScript engineer (Frontend React, backend Node.js Express) and software developer. Take a look at my portfolio projects."
         />
         <meta
           name="keywords"
           content="software developer, software engineer, React, JavaScript, Node, Express, MERN, MongoDB, SQL"
         />
-        <meta name="author" content="Your Name" />
+        <meta name="author" content="Fred Postles" />
         <link rel="canonical" href="https://your-portfolio.com/about" />
       </Helmet>
       <h1 className="section__heading">About Me</h1>
