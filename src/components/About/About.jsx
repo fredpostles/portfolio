@@ -1,35 +1,23 @@
 import React from "react";
+import { skills } from "../../data/skills";
+import Helmet from "react-helmet";
 
 const About = () => {
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Redux",
-    "Node.js",
-    "SQL",
-    "NoSQL",
-    "GraphQL",
-    "SASS/SCSS",
-    "SPAs",
-    "Bootstrap",
-    "APIs",
-    "REST",
-    "Git",
-    "Testing",
-    "TDD",
-    "TypeScript",
-    "Communication",
-    "Attention to detail",
-    "Adaptability",
-    "Adobe Premiere Pro",
-    "Adobe Photoshop",
-    "Adobe Audition",
-  ];
-
   return (
     <section id="about" className="about">
+      <Helmet>
+        <title>About - Fred's Portfolio</title>
+        <meta
+          name="description"
+          content="Learn more about me and my experience as a JavaScript engineer (Frontend React, backend Node.js Express) and software developer."
+        />
+        <meta
+          name="keywords"
+          content="software developer, software engineer, React, JavaScript, Node, Express, MERN, MongoDB, SQL"
+        />
+        <meta name="author" content="Your Name" />
+        <link rel="canonical" href="https://your-portfolio.com/about" />
+      </Helmet>
       <h1 className="section__heading">About Me</h1>
       <div className="about__wrapper">
         <div className="about__content__wrapper">
@@ -52,9 +40,7 @@ const About = () => {
               <span className="accent">multidisciplinary background</span> to
               approach technical challenges in creative ways.
             </p>
-            {/* <p> From studies in history and visual anthropology, to work experience
-            across various sectors, including local government, charity, museums
-            and galleries, and film distribution. </p> */}
+
             <p>
               My excellent <span className="accent">communication</span> and{" "}
               <span className="accent">collaboration</span> skills, enable me to{" "}
@@ -72,14 +58,57 @@ const About = () => {
         </div>
         <div id="skills" className="skills">
           <h2 className="section__heading">Skills</h2>
-          <div className="skillsList">
-            {skills.map((element, index) => {
-              return (
-                <div key={index} className="skill">
-                  {element}
-                </div>
-              );
-            })}
+          <div className="skills__inner__container">
+            <div className="skillsList">
+              {skills.map((element, index) => {
+                return (
+                  <div key={index} className="skill">
+                    {element}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="skillsInfo">
+              <p>
+                You could say my journey to{" "}
+                <span class="accent">software engineering</span> began with
+                problem-solving experiences like{" "}
+                <span className="accent">learning to solve a Rubik's cube</span>{" "}
+                by memorizing algorithms from a YouTube video,{" "}
+                <span className="accent">teaching myself</span> how to use video
+                editing software or{" "}
+                <span className="accent">learning to tweak HTML and CSS</span>{" "}
+                on my Tumblr blog.
+              </p>
+
+              <p>
+                My <span className="accent">interest was reignited</span> as
+                lockdown struck the UK and the museum I worked at closed. I used
+                this time to complete several{" "}
+                <span className="accent">online courses</span> covering the
+                basics of <span className="accent">web development</span> and an
+                introductory Python course from Datacamp, discovering my{" "}
+                <span className="accent">
+                  passion for programming and coding
+                </span>
+                .
+              </p>
+
+              <p>
+                Later, while working in documentary film distribution, I decided
+                to make the switch to the field of
+                <span className="accent"> software engineering</span>, with help
+                from
+                <span className="accent">
+                  <a href="https://www.thejump.tech/part-time-software-engineering-course/">
+                    {" "}
+                    The Jump Digital's Full-Stack Engineering course
+                  </a>
+                </span>
+                , and I am excited about using my natural technical,
+                problem-solving and communication abilities in this field.
+              </p>
+            </div>
           </div>
         </div>
       </div>
