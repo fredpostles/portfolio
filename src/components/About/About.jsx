@@ -1,35 +1,23 @@
 import React from "react";
+import { skills } from "../../data/skills";
+import Helmet from "react-helmet";
 
 const About = () => {
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Redux",
-    "Node.js",
-    "SQL",
-    "NoSQL",
-    "GraphQL",
-    "SASS/SCSS",
-    "SPAs",
-    "Bootstrap",
-    "APIs",
-    "REST",
-    "Git",
-    "Testing",
-    "TDD",
-    "TypeScript",
-    "Communication",
-    "Attention to detail",
-    "Adaptability",
-    "Adobe Premiere Pro",
-    "Adobe Photoshop",
-    "Adobe Audition",
-  ];
-
   return (
     <section id="about" className="about">
+      <Helmet>
+        <title>About - Fred's Portfolio</title>
+        <meta
+          name="description"
+          content="Learn more about me and my experience as a JavaScript engineer (Frontend React, backend Node.js Express) and software developer."
+        />
+        <meta
+          name="keywords"
+          content="software developer, software engineer, React, JavaScript, Node, Express, MERN, MongoDB, SQL"
+        />
+        <meta name="author" content="Your Name" />
+        <link rel="canonical" href="https://your-portfolio.com/about" />
+      </Helmet>
       <h1 className="section__heading">About Me</h1>
       <div className="about__wrapper">
         <div className="about__content__wrapper">
@@ -120,27 +108,6 @@ const About = () => {
                 , and I am excited about using my natural technical,
                 problem-solving and communication abilities in this field.
               </p>
-
-              {/* <p>
-                I am an adaptable, creative and diligent individual with
-                industry experience in various fields including charity, museums
-                and galleries, and film distribution to broadcast and digital.
-              </p>
-              <p>
-                My multidisciplinary background in visual anthropology and
-                history, alongside my experience working across various sectors
-                highlights my adaptability and showcases my problem-solving and
-                critical thinking abilities, as well as communication and
-                collaboration skills.
-              </p>
-              <p>
-                I have a drive for improvement and a strong ability to learn and
-                pick up new skills, as evidenced by my transition from visual
-                anthropology to software engineering. As a software engineer,
-                these skills can be valuable in adapting to new technologies,
-                troubleshooting issues, and finding innovative solutions to
-                complex problems.
-              </p> */}
             </div>
           </div>
         </div>
