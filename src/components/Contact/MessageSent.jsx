@@ -1,12 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeCircleCheck,
   faCircleArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
-import Main from "../Main/Main";
 
 const MessageSent = () => {
   const messageRef = useRef(null);

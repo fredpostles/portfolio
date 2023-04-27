@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../../data/projects";
 import gsap from "gsap";
