@@ -56,12 +56,12 @@ const MessageSent = () => {
         </p>
       </div>
       <div className="explore">
-        <h1>Explore</h1>
         <div>
           <FontAwesomeIcon
             icon={faCircleArrowRight}
             className="arrow"
             onClick={handleRedirect}
+            title="Explore"
           />
         </div>
       </div>

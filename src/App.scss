@@ -605,10 +605,10 @@ form {
   .explore {
     width: fit-content;
     margin: 0 auto;
-    padding: 0.5rem 2.5rem;
+    padding: auto 2.5rem;
     color: $primary-color;
 
-    h2 {
+    h1 {
       color: $secondary-color;
     }
   }
