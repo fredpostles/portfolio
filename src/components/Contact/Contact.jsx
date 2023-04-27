@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import MessageSent from "./MessageSent";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -42,10 +45,61 @@ const Contact = () => {
       ) : (
         <>
           <div className="contact__info__container">
-            <p>
-              If you have any inquiries or collaboration opportunities, feel
-              free to reach out to me through the contact form below.
-            </p>
+            <div>
+              <p>
+                If you have any inquiries or collaboration opportunities, feel
+                free to reach out to me through the contact form below.
+              </p>
+            </div>
+            <div className="contact__links">
+              <p>
+                Alternatively, you can{" "}
+                <a href="mailto:contact@fredpostles.com" title="Email me">
+                  <span className="accent">email me</span>
+                </a>{" "}
+                directly, get in touch on{" "}
+                <a
+                  href="https://www.linkedin.com/in/fred-postles-192720198/"
+                  title="LinkedIn"
+                >
+                  <span className="accent">LinkedIn</span>
+                </a>{" "}
+                or check out my{" "}
+                <a
+                  href="/assets/files/Fred_Postles_SE_CV.pdf"
+                  download
+                  title="CV"
+                >
+                  <span className="accent">resume</span>
+                </a>
+                .
+              </p>
+            </div>
+            <div className="contact__social">
+              <div className="email__link">
+                <a href="mailto:contact@fredpostles.com" title="Email me">
+                  <FontAwesomeIcon icon={faEnvelope} className="icon" />
+                </a>
+              </div>
+              <div className="linkedin__link">
+                <a
+                  href="https://www.linkedin.com/in/fred-postles-192720198/"
+                  title="LinkedIn"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className="icon" />
+                </a>
+              </div>
+              <div className="cv__link">
+                <a
+                  href="/assets/files/Fred_Postles_SE_CV.pdf"
+                  download
+                  title="CV"
+                  // className="icon"
+                >
+                  CV
+                </a>
+              </div>
+            </div>
           </div>
           <div className="form__container">
             <form onSubmit={handleSubmit}>

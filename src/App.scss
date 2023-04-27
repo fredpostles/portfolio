@@ -2,12 +2,13 @@
 @import "./scss/Typography";
 @import "./scss/Mixins";
 @import "./scss/resets";
+@import "./scss/tooltip";
 
 // Define variables for color scheme
 $primary-color: #1a1d2b;
 $secondary-color: #ffd700;
 $tertiary-color: #ecf0f1;
-$quaternary-color: #5e8b7e;
+$quaternary-color: #5b638c;
 
 // GLOBAL STYLES
 html {
@@ -128,7 +129,7 @@ header {
   .header__logo {
     p {
       background: -webkit-linear-gradient(
-        0deg,
+        90deg,
         $tertiary-color,
         $secondary-color
       );
@@ -267,6 +268,23 @@ section {
       transform: scale(1.05);
     }
   }
+
+  // styling related to the different mockup images
+  .portfolio-mobile,
+  .four-card-feature-mobile,
+  .nowness-mobile,
+  .world-weather-mobile,
+  .simpsons-mobile {
+    height: clamp(10rem, 15rem, 20rem);
+  }
+
+  .portfolio-tablet,
+  .four-card-feature-tablet,
+  .nowness-tablet,
+  .world-weather-tablet,
+  .simpsons-tablet {
+    height: clamp(15rem, 20rem, 25rem);
+  }
 }
 
 .project__details {
@@ -350,9 +368,11 @@ section {
 .skills {
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 2rem;
+
   .section__heading {
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -380,6 +400,13 @@ section {
   color: $secondary-color;
 }
 
+.skills__inner__container {
+  > div:nth-of-type(1) {
+    margin-bottom: 1rem;
+    border-bottom: 0.25rem solid $secondary-color;
+  }
+}
+
 .skillsList {
   display: flex;
   flex-wrap: wrap;
@@ -403,6 +430,21 @@ section {
   }
 }
 
+.skillsInfo {
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+
+  a:hover {
+    border-bottom: solid $secondary-color 0.1rem;
+  }
+}
+
 // Contact styling
 .contact {
   width: 80%;
@@ -412,7 +454,62 @@ section {
     max-width: 100ch;
     margin: 0 auto;
     border-bottom: 0.1em solid $tertiary-color;
-    padding: 2rem;
+    padding: 0.5rem 1rem;
+
+    p {
+      padding: 0.25rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+    }
+  }
+
+  .contact__links {
+    margin: 0.5rem 0;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      border-bottom: solid $secondary-color 0.1rem;
+    }
+  }
+
+  .contact__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .icon {
+      padding: 0.5rem;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    .cv__link a {
+      text-align: center;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0.5rem;
+      padding: 0.2rem;
+      color: $quaternary-color;
+      background-color: $tertiary-color;
+      border-radius: 0.25rem;
+      opacity: 0.5;
+
+      &:hover {
+        background-color: $secondary-color;
+        opacity: 1;
+      }
+    }
   }
 
   .submitBtn {

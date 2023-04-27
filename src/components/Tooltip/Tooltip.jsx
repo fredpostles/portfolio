@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import "../../css/tooltip.css";
 
 const Tooltip = ({ children, content, delay = 50, direction = "bottom" }) => {
   const timeoutRef = useRef(null);

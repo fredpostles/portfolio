@@ -43,7 +43,11 @@ const ScrollToTopButton = () => {
       className={`upArrow ${isVisible ? "visible" : ""}`}
       onClick={scrollToTop}
     >
-      <FontAwesomeIcon icon={faArrowAltCircleUp} className="icon" />
+      <FontAwesomeIcon
+        icon={faArrowAltCircleUp}
+        className="icon"
+        title="Back to top"
+      />
     </button>
   );
 };
