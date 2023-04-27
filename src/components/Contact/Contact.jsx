@@ -3,7 +3,7 @@ import axios from "axios";
 import MessageSent from "./MessageSent";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -12,17 +12,21 @@ const Contact = () => {
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = process.env.REACT_APP_API_URL;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    // console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
 
     setIsSending(true);
 
     try {
       // send form data to server using axios
-      await axios.post(`${API_URL}/contact`, { name, email, message });
+      await axios.post(`${API_URL}/contact`, {
+        name,
+        email,
+        message,
+      });
 
       // clear form inputs
       setName("");
