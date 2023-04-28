@@ -13,7 +13,7 @@ const Contact = () => {
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
-  const API_URL = "http://localhost:5000";
+  const API_URL = process.env.REACT_APP_API_URL;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
