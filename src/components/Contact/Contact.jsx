@@ -23,11 +23,12 @@ const Contact = () => {
 
     try {
       // send form data to server using axios
-      await axios.post(`${API_URL}/contact`, {
+      const result = await axios.post(`${API_URL}/contact`, {
         name,
         email,
         message,
       });
+      console.log(result);
 
       // clear form inputs
       setName("");
@@ -120,7 +121,11 @@ const Contact = () => {
             </div>
           </div>
           <div className="form__container">
-            <form onSubmit={handleSubmit}>
+            <form
+              onSubmit={handleSubmit}
+              name="contactForm"
+              data-netlify="true"
+            >
               <label htmlFor="name">Name:</label>
               <input
                 type="text"
