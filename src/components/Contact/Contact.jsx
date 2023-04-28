@@ -22,7 +22,7 @@ const Contact = () => {
     console.log(process.env.API_URL);
     try {
       // send form data to server using axios
-      const result = await axios.post(`${process.env.API_URL}/contact`, {
+      const result = await axios.post(`https://api.fredpostles.com/contact`, {
         name,
         email,
         message,
@@ -37,6 +37,7 @@ const Contact = () => {
       setIsSent(true);
     } catch (error) {
       console.log(error);
+      throw error;
     }
 
     setIsSending(false);
