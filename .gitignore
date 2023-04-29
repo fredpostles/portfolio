@@ -11,9 +11,6 @@
 # production
 /build
 
-# my api url is in here
-config.js
-
 # misc
 .DS_Store
 .env
