@@ -125,7 +125,6 @@ const Contact = () => {
             <form
               onSubmit={handleSubmit}
               name="contactForm"
-              netlify
               data-netlify="true"
             >
               <label htmlFor="name">Name:</label>
