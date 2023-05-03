@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Helmet from "react-helmet";
-import { API_URL } from "../../config";
+// import { API_URL } from "../../config";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -20,10 +20,10 @@ const Contact = () => {
 
     setIsSending(true);
 
-    console.log(API_URL);
+    console.log(process.env.API_URL);
     try {
       // send form data to server using axios
-      const result = await axios.post(`${API_URL}/contact`, {
+      const result = await axios.post(`${process.env.API_URL}/contact`, {
         name,
         email,
         message,
