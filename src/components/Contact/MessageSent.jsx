@@ -49,8 +49,8 @@ const MessageSent = () => {
       <div className="dividing__line"></div>
       <div>
         <p>
-          In the meantime, feel free to explore the rest of my portfolio site
-          and check out my other projects.
+          In the meantime, feel free to explore my portfolio site and check out
+          my projects.
         </p>
       </div>
       <div className="explore">
