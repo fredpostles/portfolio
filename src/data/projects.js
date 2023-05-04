@@ -6,13 +6,12 @@ export const projects = [
       "portfolio-tablet.png",
       "portfolio-laptop.png",
       "portfolio-desktop.png",
-      "",
     ],
     description:
       "Did someone say recursion? This portfolio was built using React and SCSS, with a MongoDB backend. It's fully responsive and features plenty of interactivity with CSS and GreenSock animations.",
     demoLink: "https://fredpostles.com/",
-    gitHubLinkFront: null,
-    gitHubLinkBack: null,
+    gitHubLinkFront: "https://github.com/fredpostles/portfolio",
+    gitHubLinkBack: "https://github.com/fredpostles/portfolio-backend",
     techs: [
       "HTML",
       "SASS",

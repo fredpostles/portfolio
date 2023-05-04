@@ -16,11 +16,9 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
 
     setIsSending(true);
 
-    console.log(process.env.API_URL);
     try {
       // send form data to server using axios
       const result = await axios.post(`${process.env.API_URL}/contact`, {
