@@ -298,6 +298,9 @@ section {
 
   .project__description {
     margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1rem;
+    text-align: right;
   }
 
   a {
@@ -724,6 +727,10 @@ form {
 
   .project__card:nth-child(2n -1) {
     flex-direction: row-reverse;
+
+    .project__description {
+      text-align: left;
+    }
   }
 
   .project__techs__list {
