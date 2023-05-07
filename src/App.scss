@@ -274,7 +274,8 @@ section {
   .four-card-feature-mobile,
   .nowness-mobile,
   .world-weather-mobile,
-  .simpsons-mobile {
+  .simpsons-mobile,
+  .mfnw-mobile {
     height: clamp(10rem, 15rem, 20rem);
   }
 
@@ -282,7 +283,8 @@ section {
   .four-card-feature-tablet,
   .nowness-tablet,
   .world-weather-tablet,
-  .simpsons-tablet {
+  .simpsons-tablet,
+  .mfnw-tablet {
     height: clamp(15rem, 20rem, 25rem);
   }
 }
