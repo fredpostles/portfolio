@@ -25,9 +25,9 @@ export const projects = [
   {
     title: "Make Food, Not Waste",
     image: [
-      "mfnw-desktop.png",
-      "mfnw-desktop.png",
-      "mfnw-desktop.png",
+      "mfnw-mobile.png",
+      "mfnw-tablet.png",
+      "mfnw-laptop.png",
       "mfnw-desktop.png",
     ],
     description:
