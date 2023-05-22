@@ -84,7 +84,7 @@ const Contact = () => {
                 </a>{" "}
                 or check out my{" "}
                 <a
-                  href="/assets/files/Fred_Postles_SE_CV.pdf"
+                  href="/assets/files/Fred_Postles_Software_Engineer_CV.pdf"
                   download
                   title="CV"
                 >
