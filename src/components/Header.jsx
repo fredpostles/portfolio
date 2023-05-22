@@ -58,7 +58,11 @@ const Header = () => {
         </nav>
         <div className="header__links">
           <div className="cv__link">
-            <a href="/assets/files/Fred_Postles_SE_CV.pdf" download title="CV">
+            <a
+              href="/assets/files/Fred_Postles_Software_Engineer_CV.pdf"
+              download
+              title="CV"
+            >
               CV
             </a>
           </div>
