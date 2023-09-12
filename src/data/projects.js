@@ -8,7 +8,7 @@ export const projects = [
       "portfolio-desktop.png",
     ],
     description:
-      "Did someone say recursion? This portfolio was built using React and SCSS, with a Node.js backend and a MongoDB database. It's fully responsive and features plenty of interactivity with CSS and GreenSock animations.",
+      "This portfolio was built using React and SCSS, with a Node.js backend and a MongoDB database. It's fully responsive and features plenty of interactivity with CSS and GreenSock animations.",
     demoLink: "https://fredpostles.com/",
     gitHubLinkFront: "https://github.com/fredpostles/portfolio",
     gitHubLinkBack: "https://github.com/fredpostles/portfolio-backend",
@@ -31,8 +31,8 @@ export const projects = [
       "mfnw-desktop.png",
     ],
     description:
-      "A React single page application designed to encourage people to use the food they have so it doesn't go to waste. Users can add ingredients to their pantry and search for recipes that will utilize them. They can also save recipes they like for later. Backend currently still in development.",
-    demoLink: "https://make-food-not-waste.netlify.app/",
+      "A React single page application designed to encourage people to use the food they have so it doesn't go to waste. Users can add ingredients to their pantry and search for recipes that will utilize them. They can also save recipes they like for later. The frontend was built with React and Redux. The backend was written in Node.js, using the Express framework, and uses SQL to query the MySQL/MariaDB database.",
+    demoLink: "https://makefoodnotwaste.co.uk/",
     gitHubLinkFront: "https://github.com/fredpostles/food-waste-app",
     gitHubLinkBack: "https://github.com/fredpostles/mfnw-backend",
     techs: [

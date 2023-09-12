@@ -84,7 +84,7 @@ const Contact = () => {
                 </a>{" "}
                 or check out my{" "}
                 <a
-                  href="/assets/files/Fred_Postles_Software_Engineer_CV.pdf"
+                  href="/assets/files/FrontendEngineer_JS_FP.pdf"
                   download
                   title="CV"
                 >
@@ -109,7 +109,7 @@ const Contact = () => {
               </div>
               <div className="cv__link">
                 <a
-                  href="/assets/files/Fred_Postles_Software_Engineer_CV.pdf"
+                  href="/assets/files/FrontendEngineer_JS_FP.pdf"
                   download
                   title="CV"
                   // className="icon"

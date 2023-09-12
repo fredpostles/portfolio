@@ -59,7 +59,7 @@ const Header = () => {
         <div className="header__links">
           <div className="cv__link">
             <a
-              href="/assets/files/Fred_Postles_Software_Engineer_CV.pdf"
+              href="/assets/files/FrontendEngineer_JS_FP.pdf"
               download
               title="CV"
             >
