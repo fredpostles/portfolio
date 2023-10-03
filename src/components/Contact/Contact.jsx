@@ -21,7 +21,7 @@ const Contact = () => {
 
     try {
       // send form data to server using axios
-      const result = await axios.post(`${process.env.API_URL}/contact`, {
+      const result = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, {
         name,
         email,
         message,
@@ -55,7 +55,7 @@ const Contact = () => {
           content="software developer, software engineer, React, JavaScript, Node, Express, MERN, MongoDB, SQL"
         />
         <meta name="author" content="Fred Postles" />
-        <link rel="canonical" href="https://your-portfolio.com/about" />
+        <link rel="canonical" href="https://fredpostles.com/about" />
       </Helmet>
       <h2 className="section__heading">Contact Me</h2>
       {isSent ? (
