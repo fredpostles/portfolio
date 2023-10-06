@@ -20,6 +20,7 @@ const Contact = () => {
     setIsSending(true);
 
     try {
+      console.log(`${process.env.REACT_APP_API_URL}/contact`);
       // send form data to server using axios
       const result = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, {
         name,
@@ -37,9 +38,10 @@ const Contact = () => {
     } catch (error) {
       console.log(error);
       throw error;
-    }
-
-    setIsSending(false);
+    }finally {
+  setIsSending(false); // Set isSending to false regardless of success or error.
+  setIsSent(true);
+}
   };
 
   return (
