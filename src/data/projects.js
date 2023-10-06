@@ -30,8 +30,7 @@ export const projects = [
       "mfnw-laptop.png",
       "mfnw-desktop.png",
     ],
-    description:
-      "A React single page application designed to encourage people to use the food they have so it doesn't go to waste. Users can add ingredients to their pantry and search for recipes that will utilize them. They can also save recipes they like for later. The frontend was built with React and Redux. The backend was written in Node.js, using the Express framework, and uses SQL to query the MySQL/MariaDB database. Test login: email: demo@makefoodnotwaste.co.uk, password: demoversion",
+    description: `A single page application that empowers users to reduce food waste by efficiently managing their pantry items and discovering recipes based on available ingredients. Users can add ingredients to their pantry and search for recipes that will utilize them. They can also save recipes they like for later. The frontend was built with React and Redux. The backend was written in Node.js, using the Express framework, and uses SQL to query the MySQL (MariaDB) database. Test login: email: demo[at]makefoodnotwaste.co.uk, password: demoversion`,
     demoLink: "https://makefoodnotwaste.co.uk/",
     gitHubLinkFront: "https://github.com/fredpostles/food-waste-app",
     gitHubLinkBack: "https://github.com/fredpostles/mfnw-backend",
@@ -70,7 +69,7 @@ export const projects = [
       "world-weather-desktop.png",
     ],
     description:
-      "Written in vanilla JavaScript, this weather website uses the Open Weather Map and Visual Crossing APIs to retrieve weather data and forecasts for the next 2 weeks, wherever the user is in the world. Features the ability to search for locations or choose on a map.",
+      "Written in vanilla JavaScript, this weather website uses the Visual Crossing API to retrieve weather data and forecasts for the next 2 weeks, wherever the user is in the world. The Open Weather Map and Mapbox APIs are utilised for location lookup and map search features.",
     demoLink: "https://fp-world-weather.netlify.app/",
     gitHubLinkFront: "https://github.com/fredpostles/weather-api",
     gitHubLinkBack: null,
@@ -85,7 +84,7 @@ export const projects = [
       "nowness-desktop.png",
     ],
     description:
-      "Fully-responsive homage version of nowness.com, recreated purely using HTML and CSS, demonstrating my ability to faithfully reproduce any design.",
+      "Fully-responsive homage version of nowness.com. Recreated using only HTML and CSS, demonstrating my ability to faithfully reproduce any design in pixel-perfect style.",
     demoLink: "https://nowness-homage-fp.netlify.app/",
     gitHubLinkFront: "https://github.com/fredpostles/nowness-homage-piece",
     gitHubLinkBack: null,

@@ -36,23 +36,29 @@ const About = () => {
               turned <span className="accent">programmer</span>.
             </h2>
             <p>
-              I draw on my{" "}
-              <span className="accent">multidisciplinary background</span> to
-              approach technical challenges in creative ways.
-            </p>
-
-            <p>
-              My excellent <span className="accent">communication</span> and{" "}
-              <span className="accent">collaboration</span> skills, enable me to{" "}
-              <span className="accent">work effectively</span> in a team and my{" "}
-              <span className="accent">ability to adapt</span> to different
-              contexts makes me an asset in any environment.
+              I've <span className="accent">always been drawn</span> to the
+              intricate <span className="accent">puzzles of logic</span>, like
+              cracking a Rubik's Cube, or solving that puzzle in the Christmas
+              cracker. Growing up <span className="accent">bilingual</span>,
+              I've also got firsthand experience of the{" "}
+              <span className="accent">
+                power of language and communication
+              </span>
+              .
             </p>
             <p>
-              <span className="accent">When I'm not coding</span>, you might
-              find me at a gallery or out hiking. Or I could be out on my bike
-              or enjoying a coffee. Sometimes I might even be off{" "}
-              <span className="accent">travelling and exploring</span>.
+              <span className="accent">
+                Coding, to me, is the ultimate fusion of linguistic skill and
+                analytical thinking — a creative means to address society's most
+                pressing issues, like climate change, poverty, and social
+                justice. It's this potential that interests and motivates me and
+                that's why I strive to harness the power of code for a better
+                world.{" "}
+              </span>
+            </p>
+            <p>
+              I am excited about using my natural technical, problem-solving and
+              communication abilities in this field.
             </p>
           </div>
         </div>
@@ -70,43 +76,32 @@ const About = () => {
             </div>
             <div className="skillsInfo">
               <p>
-                You could say my journey to{" "}
-                <span className="accent">software engineering</span> began with
-                problem-solving experiences like{" "}
-                <span className="accent">learning to solve a Rubik's cube</span>{" "}
-                by memorizing algorithms from a YouTube video,{" "}
-                <span className="accent">teaching myself</span> how to use video
-                editing software or{" "}
-                <span className="accent">learning to tweak HTML and CSS</span>{" "}
-                on my Tumblr blog.
+                My excellent <span className="accent">communication</span> and{" "}
+                <span className="accent">collaboration</span> skills, enable me
+                to <span className="accent">work effectively</span> in a team
+                and my <span className="accent">ability to adapt</span> to
+                different contexts makes me an asset in any environment.
               </p>
-
               <p>
-                My <span className="accent">interest was reignited</span> as
-                lockdown struck the UK and the museum I worked at closed. I used
-                this time to complete several{" "}
-                <span className="accent">online courses</span> covering the
-                basics of <span className="accent">web development</span> and an
-                introductory Python course from Datacamp, discovering my{" "}
-                <span className="accent">
-                  passion for programming and coding
-                </span>
-                .
+                My background in{" "}
+                <span className="accent">anthropology and history</span> has
+                honed my <span className="accent">analytical abilities</span>,
+                allowing me to approach problems with a{" "}
+                <span className="accent">fresh perspective.</span> Filmmaking
+                and editing experience not only showcases my{" "}
+                <span className="accent"> technical abilities</span> but also
+                underscores my
+                <span className="accent"> visual aptitude.</span>
               </p>
-
               <p>
-                Later, while working in documentary film distribution, I decided
-                to make the switch to the field of
-                <span className="accent"> software engineering</span>, with help
-                from
+                I'm{" "}
+                <span className="accent">passionate about pushing myself</span>{" "}
+                to try new things, including the{" "}
+                <span className="accent">latest tech trends</span>, embracing
+                lifelong learning to keep my skills sharp.{" "}
                 <span className="accent">
-                  <a href="https://www.thejump.tech/part-time-software-engineering-course/">
-                    {" "}
-                    The Jump Digital's Full-Stack Engineering course
-                  </a>
+                  I'm always looking for new challenges and growth.
                 </span>
-                , and I am excited about using my natural technical,
-                problem-solving and communication abilities in this field.
               </p>
             </div>
           </div>

@@ -16,7 +16,7 @@ export const skills = [
   "Git",
   "Testing",
   "TDD",
-  "TypeScript",
+  "Problem Solving",
   "Communication",
   "Attention to detail",
   "Adaptability",
